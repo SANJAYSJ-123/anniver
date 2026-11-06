@@ -1,0 +1,332 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday My Favorite Human ❤️</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #20002c, #6a0572, #c33764);
+    color: white;
+    overflow-x: hidden;
+    text-align: center;
+}
+
+/* Background hearts */
+
+.heart {
+    position: fixed;
+    bottom: -30px;
+    color: #ffb6d9;
+    font-size: 22px;
+    animation: float 8s linear infinite;
+    pointer-events: none;
+    z-index: 0;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+    20% { opacity: 1; }
+    100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+section {
+    padding: 80px 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tag {
+    color: #ffd6eb;
+    letter-spacing: 4px;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: clamp(38px, 8vw, 75px);
+    text-shadow: 0 0 25px #ff80bf;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 10px #ff80bf; }
+    to { text-shadow: 0 0 35px #ff1493; }
+}
+
+.hero p {
+    font-size: 18px;
+    margin: 20px 0;
+    color: #ffe5f1;
+}
+
+button {
+    padding: 15px 35px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(45deg, #ff69b4, #ff1493);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 0 20px #ff69b4;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 35px #ff1493;
+}
+
+h2 {
+    font-size: clamp(30px, 5vw, 45px);
+    margin-bottom: 25px;
+    color: #ffd6eb;
+}
+
+.card {
+    max-width: 750px;
+    margin: auto;
+    padding: 35px;
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 25px;
+    background: rgba(255,255,255,0.10);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+    line-height: 2;
+    font-size: 17px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 850px;
+    margin: auto;
+}
+
+.photo {
+    height: 230px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.15);
+    border: 2px dashed #ffb6d9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    overflow: hidden;
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gift {
+    font-size: 80px;
+    margin: 20px;
+    animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+    50% { transform: translateY(-15px); }
+}
+
+#surprise {
+    display: none;
+    margin: 30px auto 0;
+    max-width: 700px;
+    animation: appear 1s ease;
+}
+
+@keyframes appear {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+footer {
+    padding: 35px;
+    color: #ffd6eb;
+}
+
+.small {
+    font-size: 14px;
+    color: #ffdaeb;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Floating hearts -->
+<script>
+for(let i=0; i<25; i++) {
+    let heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerHTML = ["❤️","💗","💕","✨","🦋"][Math.floor(Math.random()*5)];
+    heart.style.left = Math.random()*100 + "vw";
+    heart.style.animationDuration = (5+Math.random()*8) + "s";
+    heart.style.animationDelay = Math.random()*5 + "s";
+    document.body.appendChild(heart);
+}
+</script>
+
+<!-- HERO -->
+<section class="hero">
+
+    <div class="tag">A VERY SPECIAL DAY FOR ME AND MY SPECIAL PERSON</div>
+
+    <h1>HAPPY 1 YEAR ANNIVERSARY D THANGAA PULLAAAAAA🎂</h1>
+
+    <p>
+        TO MA AZHAGII WHO MAKES MY DAY MORE BRIGHTER! 💗
+    </p>
+
+    <button onclick="document.getElementById('message').scrollIntoView()">
+        Open Your Surprise 💌
+    </button>
+
+    <p class="small">Scroll down for something special ↓</p>
+
+</section>
+
+<!-- FRIENDSHIP MESSAGE -->
+<section id="message">
+
+    <h2>A Little Message unakaga💌</h2>
+
+    <div class="card">
+
+En Thangaaa pullaaa kaga🤌🏻
+Inga paru subha namma 1 year anniversary ithu and I love to celebrate it with youu ma Princess, enaku ithu pudikum 1 year anniversary nga ithu💁🏻‍♂️
+Inga paru d thangaa pullaaa unna neriyaa hurt panniruka naa ana athukulam rombaaa sorryy nee illama en one day kuda ponathu illa unkitta pesama ennala irukavey mudiyathu d thangoo🤧
+I love youuuuu I love ur soul I love ur charcter, I love ur cheekiessss uh rombaaa, I love ur face, I love ur smile, I love ur lips, I love ur  ears, I love ur nose , I love ur chin I love ur hair,I love ur tummyy, I love ur body, I love ur boobies, I love hip, I love hip , I love ur bellyyy, I love ur thighs, I love ur feet so much I love to touch ur feet and be there alwaysss!!
+Inga paruuu ellarum solluvanga oruthara depend panni epomay Iruka kudathu nu ana na apdi illa d na unna depend pannidha Iruka itha open ah brave ah untayae solluva🫤        <br><br>
+
+        <b>Happy Anniversary Subha! ❤️</b>
+
+    </div>
+
+</section>
+
+<!-- SURPRISE -->
+<section>
+
+    <h2>A Little Surprise unaku 🎁</h2>
+
+    <div class="gift">🎁</div>
+
+    <button onclick="showSurprise()">
+        Click To Open ❤️
+    </button>
+
+    <div id="surprise" class="card">
+
+        <h2>You're ma gorgeousss princess! 💗</h2>
+
+        <p>
+            Enaku unna epomay sirika vechi paknu nu rombaa asa theriyuma nee siricha avolo azhagaaaa irupa theriyuma na atha evolo neram venalu papen d🤧🤧🤧Ennala unna sirika vechi pathuka mudiyuma Theriyala ana enaku therinja ella vazhiliyum unna sirika vechi pathupa nu d thangoo🏃🏻‍♂️
+With the same love and more and more love before I love u more than yesterdayyy bae🤌🏻
+
+            <br><br>
+
+            <b>Always smile and give me more butterflies d love❤️🦋</b>
+        </p>
+
+    </div>
+
+</section>
+
+<!-- END -->
+<section>
+
+    <h1>Stay Happy Always d<br> azhagii ponnu! 💗</h1>
+
+    <p>
+        love u more than anything!! ❤️   </p>
+
+    <p style="margin-top:20px">
+        Happy Anniversary Once Again Darlingooo! 🎂✨
+    </p>
+
+</section>
+
+<footer>
+    Made with ❤️ for someone special.
+    <br>
+    <span class="small">A friendship that deserves its own little website.</span>
+</footer>
+
+<script>
+
+function showSurprise() {
+
+    let surprise = document.getElementById("surprise");
+
+    surprise.style.display = "block";
+
+    surprise.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+    });
+
+    // Celebration effect
+    for(let i=0; i<30; i++) {
+
+        let heart = document.createElement("div");
+
+        heart.innerHTML = ["❤️","💗","🎉","✨","💕"][Math.floor(Math.random()*5)];
+
+        heart.style.position = "fixed";
+        heart.style.left = Math.random()*100 + "vw";
+        heart.style.top = "-30px";
+        heart.style.fontSize = "25px";
+        heart.style.zIndex = "999";
+        heart.style.pointerEvents = "none";
+
+        document.body.appendChild(heart);
+
+        heart.animate([
+            { transform: "translateY(0) rotate(0deg)", opacity: 1 },
+            { transform: "translateY(100vh) rotate(360deg)", opacity: 0 }
+        ], {
+            duration: 2500 + Math.random()*2000
+        });
+
+        setTimeout(() => heart.remove(), 5000);
+    }
+
+}
+
+</script>
+
+</body>
+</html>
+
